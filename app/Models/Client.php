@@ -7,7 +7,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens;
+use
+	\Illuminate\Notifications\Notifiable;
 
 /**
  * Class Client
@@ -24,6 +28,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Client extends Model
 {
+	use HasApiTokens, HasFactory, Notifiable;
+
 	protected $table = 'clients';
 	public $timestamps = false;
 
