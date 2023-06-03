@@ -48,7 +48,7 @@ class ProduitController extends Controller
         return response()->json([
             $commande,
             'success' => true,
-            'message' => 'Commande créée avec succes'
+            'message' => 'Commande créée avec succès'
         ]); // Retourne une réponse JSON indiquant que la commande a été créée avec succès
     }
 }
