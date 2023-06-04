@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\ProduitController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,4 +23,5 @@ Route::get('/produits', [ProduitController::class, 'liste']);
 Route::get('/produits/{id}', [ProduitController::class, 'show']);
 Route::post('/produits', [ProduitController::class, 'ajouter']);
 // Route::post('/commandes', [ProduitController::class, 'ajouterCommande']);
-Route::post('/commandes', [ProduitController::class, 'ajouterCommande']);
+Route::post('/commandes', [CommandeController::class, 'ajouterCommande']);
+Route::get('/commandes/{idClient}', [CommandeController::class, 'commandesClient']);
