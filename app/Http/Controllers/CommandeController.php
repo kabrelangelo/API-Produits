@@ -33,4 +33,11 @@ class CommandeController extends Controller
     {
         return response()->json(Commande::where('id_client', $idClient)->with('produit')->get());
     }
+
+
+    function supprimerCommande($idCommande)
+    {
+        // Code permettant de supprimer une commande
+        Commande::destroy($idCommande);
+    }
 }

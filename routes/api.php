@@ -25,3 +25,4 @@ Route::post('/produits', [ProduitController::class, 'ajouter']);
 // Route::post('/commandes', [ProduitController::class, 'ajouterCommande']);
 Route::post('/commandes', [CommandeController::class, 'ajouterCommande']);
 Route::get('/commandes/{idClient}', [CommandeController::class, 'commandesClient']);
+Route::delete('/commandes/delete/{idClient}', [CommandeController::class, 'supprimerCommande']);

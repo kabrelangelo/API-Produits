@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\Client::factory()->count(50)->create();
 
         \App\Models\Produit::factory()->count(100)->create();
+        \App\Models\Commande::factory()->count(50)->create();
+
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
