@@ -17,7 +17,7 @@ class ProduitFactory extends Factory
     public function definition(): array
     {
         return [
-            'nom' => $this->faker->name,
+            'nom' => $this->faker->word(),
             'description' => $this->faker->sentence(),
             'lien_image' => $this->faker->imageUrl(
                 'https://picsum.photos/200/300'

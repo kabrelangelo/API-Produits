@@ -17,8 +17,8 @@ class CommandeFactory extends Factory
     public function definition(): array
     {
         return [
-            'id_client' => $this->faker->numberBetween(1, 50),
-            'id_produit' => $this->faker->numberBetween(8, 50),
+            'id_client' => $this->faker->numberBetween(1, 20),
+            'id_produit' => $this->faker->numberBetween(1, 24),
             'quantite' => $this->faker->numberBetween(1, 10),
             'date' => $this->faker->dateTime(now())
         ];
