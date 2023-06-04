@@ -23,8 +23,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/produits', [ProduitController::class, 'liste']);
 Route::get('/produits/{id}', [ProduitController::class, 'show']);
 Route::post('/produits', [ProduitController::class, 'ajouter']);
-Route::post('/client', [ClientController::class, 'creerClient']);
+
+
 // Route::post('/commandes', [ProduitController::class, 'ajouterCommande']);
 Route::post('/commandes', [CommandeController::class, 'ajouterCommande']);
 Route::get('/commandes/{idClient}', [CommandeController::class, 'commandesClient']);
 Route::delete('/commandes/{idCommande}', [CommandeController::class, 'supprimerCommande']);
+
+
+//Route::post('/inscription', [ClientController::class, 'inscription']);
+Route::post('/client', [ClientController::class, 'creerClient']);
+Route::post('/client/authentification', [ClientController::class, 'authentifierClient']);
