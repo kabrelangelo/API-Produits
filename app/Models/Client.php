@@ -9,6 +9,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
 use
 	\Illuminate\Notifications\Notifiable;
@@ -47,5 +48,10 @@ class Client extends Model
 	public function commandes()
 	{
 		return $this->hasMany(Commande::class, 'id_client');
+	}
+
+	public function verifyPassword($password)
+	{
+		return Hash::check($password, $this->password);
 	}
 }
