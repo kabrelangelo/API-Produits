@@ -42,7 +42,7 @@ class ClientController extends Controller
 
         if (Client::where('email', $credentials['email'])->first() && Client::where('email', $credentials['email'])->first()->verifyPassword($credentials['password'])) {
             $client = Client::where('email', $credentials['email'])->first();
-            $token = $client->createToken('ApiProduits')->accessToken;
+            $token = $client->createToken('Laravel')->accessToken;
             return response()->json(['token' => $token], 200)->withCookie(cookie('token', $token, 60));
         } else {
             return response()->json(['error' => 'Unauthorized'], 401);
