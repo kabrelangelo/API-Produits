@@ -35,4 +35,4 @@ Route::delete('/commandes/{idCommande}', [CommandeController::class, 'supprimerC
 // Route::post('/client/authentification', [ClientController::class, 'authentifierClient'])
 //     ->middleware('auth:clients');
 Route::post('/client', [ClientController::class, 'creerClient']);
-//Route::post('/client/authentification', [ClientController::class, 'authentifierClient']);
+Route::post('/client/login', [ClientController::class, 'login']);
